@@ -8,7 +8,7 @@ FreeDV uses [GNU gettext](https://www.gnu.org/software/gettext/) via wxWidgets f
 1. Create a `.po` file for your language from the template, e.g. for Brazilian Portuguese:
 
    ```
-   msginit --locale=pt_BR --input=freedv.pot --output-file=pt_BR.po
+   xgettext --from-code=UTF-8 --keyword=_ --keyword=wxTRANSLATE --keyword=wxT -o freedv_completo.po $(find src -name "*.cpp" -o -name "*.h")
    ```
 
 2. Translate the strings in `pt_BR.po` using a text editor or a tool such as [Poedit](https://poedit.net/).
